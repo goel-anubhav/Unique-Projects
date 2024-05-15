@@ -1,5 +1,6 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
+import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 
 function SlideShow() {
   return (
@@ -11,23 +12,30 @@ function SlideShow() {
           left: 0,
           width: "100%",
           height: "100%",
-          backgroundImage: `url('path_to_your_background_image.jpg')`,
+          backgroundImage: `url('/MainBG.png')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           zIndex: -1,
         }}></div>
-      <Carousel>
+      <Carousel
+        prevIcon={<BsChevronLeft style={{ color: "black" }} />}
+        nextIcon={<BsChevronRight style={{ color: "black" }} />}
+        prevLabel=""
+        nextLabel=""
+        indicators={false}>
         <Carousel.Item>
           <img
-            style={{ width: "100%", height: "400px" }}
-            src="https://img.freepik.com/free-photo/education-day-arrangement-table-with-copy-space_23-2148721266.jpg"
+            className="d-block w-100"
+            src="/Main.png"
             alt="First slide"
+            style={{ objectFit: "cover", height: "400px" }}
           />
           <Carousel.Caption
             style={{
               background: "rgba(0, 0, 0, 0.5)",
               color: "white",
               padding: "20px",
+              paddingTop: "40px",
             }}>
             <h3>Welcome To Unique Projects By</h3>{" "}
             <h3>
@@ -49,9 +57,10 @@ function SlideShow() {
         </Carousel.Item>
         <Carousel.Item>
           <img
-            style={{ width: "100%", height: "400px" }}
-            src="https://thumbs.dreamstime.com/b/education-study-books-high-school-university-16383080.jpg"
+            className="d-block w-100"
+            src="/Main2.png"
             alt="Second slide"
+            style={{ objectFit: "cover", height: "400px" }}
           />
           <Carousel.Caption
             style={{
@@ -70,9 +79,10 @@ function SlideShow() {
         </Carousel.Item>
         <Carousel.Item>
           <img
-            style={{ width: "100%", height: "400px" }}
-            src="https://images.pexels.com/photos/159866/books-book-pages-read-literature-159866.jpeg?cs=srgb&dl=pexels-pixabay-159866.jpg&fm=jpg"
+            className="d-block w-100"
+            src="/Main3.png"
             alt="Third slide"
+            style={{ objectFit: "cover", height: "400px" }}
           />
           <Carousel.Caption
             style={{

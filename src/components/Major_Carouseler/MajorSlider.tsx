@@ -23,10 +23,14 @@ export default function App() {
       <h1
         style={{
           textAlign: "center",
-          background: "yellow",
-          marginTop: "5px",
+          background: "linear-gradient(to right, #ff416c, #E97451)",
+          color: "white",
+          paddingTop: "5 px",
+          padding: "15px",
+          borderRadius: "10px",
+          boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
         }}>
-        Major Project Catalogue
+        Mini Project Catalogue
       </h1>
       <Carousel showDots={false} responsive={responsive}>
         {product}
