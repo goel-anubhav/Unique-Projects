@@ -1,17 +1,22 @@
+// Homepage.js
 import React from "react";
 import Navbar from "./Navbar";
-import Footer from "./Footer";
+import SliderShow from "./SliderShow";
 import Slider from "./Carouseler/Slider";
 import MajorSlider from "./Major_Carouseler/MajorSlider";
-import SliderShow from "./SliderShow";
+import Footer from "./Footer";
 
 function Homepage() {
   return (
     <>
       <Navbar />
       <SliderShow />
-      <Slider />
-      <MajorSlider />
+      <section id="mini-projects">
+        <Slider />
+      </section>
+      <section id="major-projects">
+        <MajorSlider />
+      </section>
       <Footer />
     </>
   );

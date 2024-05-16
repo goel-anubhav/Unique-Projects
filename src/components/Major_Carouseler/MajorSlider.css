@@ -125,3 +125,551 @@
 .card button:hover {
   background-color: #0056b3;
 }
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(19, 19, 19, 0.87);
+  background-color: #eeeeee;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+.card {
+  width: 250px; /* Adjust width as needed */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.card button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
+/* Adjust the gap between Carousel dots */
+.react-multi-carousel-dot-list {
+  display: flex;
+  justify-content: center; /* Center the dots */
+  gap: 20px; /* Adjust the gap between dots */
+  margin-top: 10px;
+}
+
+.react-multi-carousel-dot button {
+  width: 10px; /* Adjust the width of individual dots */
+  height: 10px; /* Adjust the height of individual dots */
+  border-radius: 50%; /* Ensure dots are circular */
+  background-color: #ccc; /* Change dot color if needed */
+  border: none; /* Remove dot border */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Style for active dot */
+.react-multi-carousel-dot button.active {
+  background-color: #007bff; /* Change active dot color if needed */
+}
+/* Slider.css */
+.Product {
+  display: flex;
+  justify-content: center; /* Center the cards horizontally */
+}
+
+.card {
+  width: 250px; /* Adjust width as needed */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  background-color: #fff;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.card button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(19, 19, 19, 0.87);
+  background-color: #eeeeee;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+.card {
+  width: 250px; /* Adjust width as needed */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.card button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
+/* Adjust the gap between Carousel dots */
+.react-multi-carousel-dot-list {
+  display: flex;
+  justify-content: center; /* Center the dots */
+  gap: 20px; /* Adjust the gap between dots */
+  margin-top: 10px;
+}
+
+.react-multi-carousel-dot button {
+  width: 10px; /* Adjust the width of individual dots */
+  height: 10px; /* Adjust the height of individual dots */
+  border-radius: 50%; /* Ensure dots are circular */
+  background-color: #ccc; /* Change dot color if needed */
+  border: none; /* Remove dot border */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Style for active dot */
+.react-multi-carousel-dot button.active {
+  background-color: #007bff; /* Change active dot color if needed */
+}
+/* Slider.css */
+.Product {
+  display: flex;
+  justify-content: center; /* Center the cards horizontally */
+}
+
+.card {
+  width: 250px; /* Adjust width as needed */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  background-color: #fff;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.card button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(19, 19, 19, 0.87);
+  background-color: #eeeeee;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+.card {
+  width: 250px; /* Adjust width as needed */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.card button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
+/* Adjust the gap between Carousel dots */
+.react-multi-carousel-dot-list {
+  display: flex;
+  justify-content: center; /* Center the dots */
+  gap: 20px; /* Adjust the gap between dots */
+  margin-top: 10px;
+}
+
+.react-multi-carousel-dot button {
+  width: 10px; /* Adjust the width of individual dots */
+  height: 10px; /* Adjust the height of individual dots */
+  border-radius: 50%; /* Ensure dots are circular */
+  background-color: #ccc; /* Change dot color if needed */
+  border: none; /* Remove dot border */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Style for active dot */
+.react-multi-carousel-dot button.active {
+  background-color: #007bff; /* Change active dot color if needed */
+}
+/* Slider.css */
+.Product {
+  display: flex;
+  justify-content: center; /* Center the cards horizontally */
+}
+
+.card {
+  width: 250px; /* Adjust width as needed */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  background-color: #fff;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.card button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(19, 19, 19, 0.87);
+  background-color: #eeeeee;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+.card {
+  width: 250px; /* Adjust width as needed */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.card button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
+/* Adjust the gap between Carousel dots */
+.react-multi-carousel-dot-list {
+  display: flex;
+  justify-content: center; /* Center the dots */
+  gap: 20px; /* Adjust the gap between dots */
+  margin-top: 10px;
+}
+
+.react-multi-carousel-dot button {
+  width: 10px; /* Adjust the width of individual dots */
+  height: 10px; /* Adjust the height of individual dots */
+  border-radius: 50%; /* Ensure dots are circular */
+  background-color: #ccc; /* Change dot color if needed */
+  border: none; /* Remove dot border */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Style for active dot */
+.react-multi-carousel-dot button.active {
+  background-color: #007bff; /* Change active dot color if needed */
+}
+/* Slider.css */
+.Product {
+  display: flex;
+  justify-content: center; /* Center the cards horizontally */
+}
+
+.card {
+  width: 250px; /* Adjust width as needed */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  background-color: #fff;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.card button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}

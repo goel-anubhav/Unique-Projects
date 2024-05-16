@@ -1,88 +1,117 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
+import { Link } from "react-scroll";
+import { motion } from "framer-motion";
 import {
-  BsHouseDoorFill,
-  BsLaptop,
-  BsChatDots,
-  BsPeopleFill,
-} from "react-icons/bs";
+  Dropdown,
+  Nav,
+  Navbar as BootstrapNavbar,
+  Container,
+} from "react-bootstrap";
 
-function ColorSchemesExample() {
+function Navbar() {
   return (
-    <>
-      {/* Light Navbar */}
-      <Navbar
-        bg="light"
-        expand="lg"
-        style={{ backgroundColor: "#f8f9fa" }}>
-        <Container fluid>
-          <Navbar.Brand href="/" className="fw-bold">
-            Unique Projects
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="/" className="nav-link">
-                <BsHouseDoorFill /> Home
-              </Nav.Link>
-              <Nav.Link href="#features" className="nav-link">
-                <BsLaptop /> Mini Projects
-              </Nav.Link>
-              <Nav.Link href="#pricing" className="nav-link">
-                <BsPeopleFill /> Major Projects
-              </Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-
-      {/* Dark Navbar */}
-      <Navbar
-        bg="dark"
-        variant="dark"
-        expand="lg"
-        className="fw-bold"
-        style={{
-          backgroundColor: "#343a40",
-          marginTop: "5px",
-          animation: "fade-in 0.5s",
-        }}>
-        <Container>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="mx-auto">
-              <Nav.Link
-                href="https://www.youtube.com/@UniqueAppSites"
-                target="_blank"
-                className="nav-link">
-                <BsLaptop /> Unique AppSites
-              </Nav.Link>
-              <Nav.Link
-                href="https://tttttt.me/UniqueAppSitesOfficial"
-                target="_blank"
-                className="nav-link">
-                <BsChatDots /> Telegram Group
-              </Nav.Link>
-              <Nav.Link
-                href="https://t.me/AnubhavGoel01"
-                target="_blank"
-                className="nav-link">
-                <BsChatDots /> Telegram Chat
-              </Nav.Link>
-              <Nav.Link
-                href="https://www.linkedin.com/in/anubhav-goel-1206/"
-                target="_blank"
-                className="nav-link">
-                <BsPeopleFill /> LinkedIn
-              </Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    </>
+    <BootstrapNavbar
+      expand="lg"
+      style={{
+        backgroundColor: "#f8f9fa",
+        boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+      }}
+      className="fw-bold">
+      <Container>
+        <BootstrapNavbar.Brand href="/" className="fw-bold">
+          Unique Projects
+        </BootstrapNavbar.Brand>
+        <BootstrapNavbar.Toggle aria-controls="responsive-navbar-nav" />
+        <BootstrapNavbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="/" className="nav-link">
+              Home
+            </Nav.Link>
+            <Dropdown
+              as={motion.div}
+              transition={{
+                type: "spring",
+                stiffness: 500,
+                damping: 30,
+              }}>
+              <Dropdown.Toggle
+                variant="transparent"
+                id="projects-dropdown">
+                Projects
+              </Dropdown.Toggle>
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}>
+                <Dropdown.Menu>
+                  <Dropdown.Item>
+                    <Nav.Link
+                      as={Link}
+                      to="mini-projects"
+                      smooth
+                      className="nav-link"
+                      duration={200}>
+                      Mini Projects
+                    </Nav.Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item>
+                    <Nav.Link
+                      as={Link}
+                      to="major-projects"
+                      smooth
+                      className="nav-link"
+                      duration={200}>
+                      Major Projects
+                    </Nav.Link>
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              </motion.div>
+            </Dropdown>
+            <Dropdown
+              as={motion.div}
+              transition={{
+                type: "spring",
+                stiffness: 500,
+                damping: 30,
+              }}>
+              <Dropdown.Toggle
+                variant="transparent"
+                id="resources-dropdown">
+                Connect With Us
+              </Dropdown.Toggle>
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}>
+                <Dropdown.Menu>
+                  <Dropdown.Item
+                    href="https://www.youtube.com/@UniqueAppSites"
+                    target="_blank">
+                    Unique AppSites
+                  </Dropdown.Item>
+                  <Dropdown.Item
+                    href="https://tttttt.me/UniqueAppSitesOfficial"
+                    target="_blank">
+                    Telegram Group
+                  </Dropdown.Item>
+                  <Dropdown.Item
+                    href="https://t.me/AnubhavGoel01"
+                    target="_blank">
+                    Telegram Chat
+                  </Dropdown.Item>
+                  <Dropdown.Item
+                    href="https://www.linkedin.com/in/anubhav-goel-1206/"
+                    target="_blank">
+                    LinkedIn
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              </motion.div>
+            </Dropdown>
+          </Nav>
+        </BootstrapNavbar.Collapse>
+      </Container>
+    </BootstrapNavbar>
   );
 }
 
-export default ColorSchemesExample;
+export default Navbar;

@@ -1,10 +1,10 @@
 // App.js
-import "./MajorSlider.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Product from "./MajorProduct";
 import { productData, responsive } from "./Majordata";
 import React from "react";
+import "./MajorSlider.css";
 
 export default function App() {
   const product = productData.map((item, index) => (
@@ -19,18 +19,21 @@ export default function App() {
   ));
 
   return (
-    <div className="App" style={{ justifyContent: "center" }}>
+    <div
+      className="App"
+      style={{ justifyContent: "center", marginTop: "20px" }}>
       <h1
         style={{
           textAlign: "center",
-          background: "linear-gradient(to right, #ff416c, #E97451)",
+          background: "linear-gradient(to right, #FFAA80, #FF0080)",
           color: "white",
-          paddingTop: "5 px",
-          padding: "15px",
-          borderRadius: "10px",
+          paddingTop: "12px",
+          paddingBottom: "15px",
+          borderRadius: "20px",
           boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+          animation: "gradientAnimation 1s linear infinite",
         }}>
-        Mini Project Catalogue
+        Major Project Catalogue
       </h1>
       <Carousel showDots={false} responsive={responsive}>
         {product}
