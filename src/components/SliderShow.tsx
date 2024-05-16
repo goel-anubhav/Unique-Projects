@@ -1,6 +1,7 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 function SlideShow() {
   return (
@@ -37,22 +38,24 @@ function SlideShow() {
               padding: "20px",
               paddingTop: "40px",
             }}>
-            <h3>Welcome To Unique Projects By</h3>{" "}
-            <h3>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}>
+              Welcome To Unique Projects By
+            </motion.h2>{" "}
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.5 }}>
               <a
-                href="#"
+                href="https://youtube.com/c/@uniqueappsites"
                 style={{ color: "white", textDecoration: "none" }}>
-                Unique AppSites
+                <b>
+                  <i>Unique AppSites</i>
+                </b>
               </a>
-            </h3>
-            <p>
-              A place to buy the projects you want in the most{" "}
-              <i>
-                <b>Cheap</b> &nbsp;
-              </i>
-              prices with installation guidance and guaranteed running
-              project
-            </p>
+            </motion.h2>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -68,13 +71,19 @@ function SlideShow() {
               color: "white",
               padding: "20px",
             }}>
-            <h3>Want Mini Projects?</h3>
-            <button
-              type="button"
-              className="btn btn-primary"
-              style={{ marginTop: "10px" }}>
-              Click Here For Mini Projects
-            </button>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}>
+              Why Us?
+            </motion.h2>
+            <motion.h4
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.5 }}>
+              We Are:{" "}
+              <i>Hassle Free, Affordable, Reliable, Supportive</i>
+            </motion.h4>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -90,13 +99,22 @@ function SlideShow() {
               color: "white",
               padding: "20px",
             }}>
-            <h3>Want Major Projects?</h3>
-            <button
-              type="button"
-              className="btn btn-primary"
-              style={{ marginTop: "10px" }}>
-              Click Here For Major Projects
-            </button>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}>
+              What we offer?
+            </motion.h2>
+            <motion.h4
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.5 }}>
+              We just don't offer project, we offer:&nbsp;{" "}
+              <i>
+                Project Documentation, Installation support and Many
+                more.....
+              </i>
+            </motion.h4>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
