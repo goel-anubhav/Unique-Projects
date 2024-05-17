@@ -100,12 +100,12 @@ const NavBar = () => {
             Home
           </Link>
           <Link to="/about" onClick={() => setClick(false)}>
-            About
+            Mini Project
           </Link>
           <Link to="/blog" onClick={() => setClick(false)}>
-            Blog
+            Major Project
           </Link>
-          <Link to="/contact" onClick={() => setClick(false)}>
+          <Link to="/Contact-Us" onClick={() => setClick(false)}>
             Contact Us
           </Link>
         </LinksContainer>
