@@ -1,4 +1,3 @@
-// App.js
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Product from "./Product";
@@ -21,7 +20,13 @@ export default function App() {
   return (
     <div
       className="App"
-      style={{ justifyContent: "center", marginTop: "20px" }}>
+      style={{
+        justifyContent: "center",
+        marginTop: "20px",
+        backgroundImage: "/Main.png",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}>
       <h1
         style={{
           textAlign: "center",

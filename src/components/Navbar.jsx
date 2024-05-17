@@ -1,117 +1,154 @@
-import React from "react";
-import { Link } from "react-scroll";
-import { motion } from "framer-motion";
-import {
-  Dropdown,
-  Nav,
-  Navbar as BootstrapNavbar,
-  Container,
-} from "react-bootstrap";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import styled from "styled-components";
 
-function Navbar() {
+const Navbar = styled.nav`
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  background: black;
+`;
+
+const LogoTitleContainer = styled.div`
+  display: flex;
+  align-items: center;
+  color: white;
+
+  @media screen and (max-width: 768px) {
+    flex-grow: 1;
+    justify-content: center;
+  }
+`;
+
+const Logo = styled.img`
+  height: 40px;
+  margin-right: 10px;
+`;
+
+const Title = styled.span`
+  font-size: 1.5rem;
+  font-weight: bold;
+`;
+
+const LinksContainer = styled.div`
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    display: ${({ click }) => (click ? "block" : "none")};
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: black;
+    text-align: center;
+  }
+`;
+
+const Link = styled(NavLink)`
+  text-decoration: none;
+  display: flex;
+  color: white;
+  align-items: center;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    padding: 1rem;
+  }
+`;
+
+const MobileMenuIcon = styled.div`
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 4vh;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+  }
+`;
+
+const SpacingDiv = styled.div`
+  height: 70px; /* Height of the gap you want to create below the navbar */
+`;
+
+const NavBar = () => {
+  const [click, setClick] = useState(false);
+
+  const handleClick = () => setClick(!click);
+
   return (
-    <BootstrapNavbar
-      expand="lg"
-      style={{
-        backgroundColor: "#f8f9fa",
-        boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
-      }}
-      className="fw-bold">
-      <Container>
-        <BootstrapNavbar.Brand href="/" className="fw-bold">
-          Unique Projects
-        </BootstrapNavbar.Brand>
-        <BootstrapNavbar.Toggle aria-controls="responsive-navbar-nav" />
-        <BootstrapNavbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="/" className="nav-link">
-              Home
-            </Nav.Link>
-            <Dropdown
-              as={motion.div}
-              transition={{
-                type: "spring",
-                stiffness: 500,
-                damping: 30,
-              }}>
-              <Dropdown.Toggle
-                variant="transparent"
-                id="projects-dropdown">
-                Projects
-              </Dropdown.Toggle>
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3 }}>
-                <Dropdown.Menu>
-                  <Dropdown.Item>
-                    <Nav.Link
-                      as={Link}
-                      to="mini-projects"
-                      smooth
-                      className="nav-link"
-                      duration={200}>
-                      Mini Projects
-                    </Nav.Link>
-                  </Dropdown.Item>
-                  <Dropdown.Item>
-                    <Nav.Link
-                      as={Link}
-                      to="major-projects"
-                      smooth
-                      className="nav-link"
-                      duration={200}>
-                      Major Projects
-                    </Nav.Link>
-                  </Dropdown.Item>
-                </Dropdown.Menu>
-              </motion.div>
-            </Dropdown>
-            <Dropdown
-              as={motion.div}
-              transition={{
-                type: "spring",
-                stiffness: 500,
-                damping: 30,
-              }}>
-              <Dropdown.Toggle
-                variant="transparent"
-                id="resources-dropdown">
-                Connect With Us
-              </Dropdown.Toggle>
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3 }}>
-                <Dropdown.Menu>
-                  <Dropdown.Item
-                    href="https://www.youtube.com/@UniqueAppSites"
-                    target="_blank">
-                    Unique AppSites
-                  </Dropdown.Item>
-                  <Dropdown.Item
-                    href="https://tttttt.me/UniqueAppSitesOfficial"
-                    target="_blank">
-                    Telegram Group
-                  </Dropdown.Item>
-                  <Dropdown.Item
-                    href="https://t.me/AnubhavGoel01"
-                    target="_blank">
-                    Telegram Chat
-                  </Dropdown.Item>
-                  <Dropdown.Item
-                    href="https://www.linkedin.com/in/anubhav-goel-1206/"
-                    target="_blank">
-                    LinkedIn
-                  </Dropdown.Item>
-                </Dropdown.Menu>
-              </motion.div>
-            </Dropdown>
-          </Nav>
-        </BootstrapNavbar.Collapse>
-      </Container>
-    </BootstrapNavbar>
+    <>
+      <Navbar>
+        <LogoTitleContainer>
+          <Logo src="/path-to-your-logo.png" alt="Logo" />
+          <Title>Unique Projects</Title>
+        </LogoTitleContainer>
+        <LinksContainer click={click}>
+          <Link to="/" onClick={() => setClick(false)}>
+            Home
+          </Link>
+          <Link to="/about" onClick={() => setClick(false)}>
+            About
+          </Link>
+          <Link to="/blog" onClick={() => setClick(false)}>
+            Blog
+          </Link>
+          <Link to="/contact" onClick={() => setClick(false)}>
+            Contact Us
+          </Link>
+        </LinksContainer>
+        <MobileMenuIcon onClick={handleClick}>
+          {click ? <HamburgerMenuClose /> : <HamburgerMenuOpen />}
+        </MobileMenuIcon>
+      </Navbar>
+      <SpacingDiv /> {/* Add this to create the space */}
+    </>
   );
-}
+};
 
-export default Navbar;
+const HamburgerMenuOpen = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round">
+    <line x1="3" y1="6" x2="21" y2="6" />
+    <line x1="3" y1="12" x2="21" y2="12" />
+    <line x1="3" y1="18" x2="21" y2="18" />
+  </svg>
+);
+
+const HamburgerMenuClose = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round">
+    <path d="M18 6 6 18" />
+    <path d="m6 6 12 12" />
+  </svg>
+);
+
+export default NavBar;
