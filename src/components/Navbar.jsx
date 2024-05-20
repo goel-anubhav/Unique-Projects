@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const Navbar = styled.nav`
@@ -49,7 +48,7 @@ const LinksContainer = styled.div`
   }
 `;
 
-const Link = styled(NavLink)`
+const Link = styled.div`
   text-decoration: none;
   display: flex;
   color: white;
@@ -57,6 +56,13 @@ const Link = styled(NavLink)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+
+  &:hover {
+    color: #ffdd40;
+    transform: scale(1.1);
+    background-color: rgba(255, 221, 64, 0.2);
+  }
 
   @media screen and (max-width: 768px) {
     display: block;
@@ -83,10 +89,18 @@ const SpacingDiv = styled.div`
   height: 70px; /* Height of the gap you want to create below the navbar */
 `;
 
-const NavBar = () => {
+const NavBar = ({ miniProjectRef }) => {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
+
+  const scrollToSection = (ref) => {
+    const yOffset = -70; // Adjust this value based on your navbar height
+    const y =
+      ref.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: "smooth" });
+    setClick(false); // Close the mobile menu after clicking the link
+  };
 
   return (
     <>
@@ -100,18 +114,12 @@ const NavBar = () => {
           <Title>Unique Projects</Title>
         </LogoTitleContainer>
         <LinksContainer click={click}>
-          <Link to="/" onClick={() => setClick(false)}>
-            Home
-          </Link>
-          <Link to="/about" onClick={() => setClick(false)}>
+          <Link onClick={() => setClick(false)}>Home</Link>
+          <Link onClick={() => scrollToSection(miniProjectRef)}>
             Mini Project
           </Link>
-          <Link to="/blog" onClick={() => setClick(false)}>
-            Major Project
-          </Link>
-          <Link to="/Contact-Us" onClick={() => setClick(false)}>
-            Contact Us
-          </Link>
+          <Link onClick={() => setClick(false)}>Major Project</Link>
+          <Link onClick={() => setClick(false)}>Contact Us</Link>
         </LinksContainer>
         <MobileMenuIcon onClick={handleClick}>
           {click ? <HamburgerMenuClose /> : <HamburgerMenuOpen />}
