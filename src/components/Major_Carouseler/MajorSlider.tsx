@@ -1,12 +1,11 @@
-// App.js
+import React, { forwardRef } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Product from "./MajorProduct";
 import { productData, responsive } from "./Majordata";
-import React from "react";
 import "./MajorSlider.css";
 
-export default function App() {
+const MajorSlider = forwardRef((props, ref) => {
   const product = productData.map((item, index) => (
     <div key={index} className="Product">
       <Product
@@ -20,8 +19,14 @@ export default function App() {
 
   return (
     <div
-      className="App"
-      style={{ justifyContent: "center", marginTop: "20px" }}>
+      style={{
+        marginTop: "20px",
+        marginBottom: "60px", // Adjust to create space for the navbar
+        position: "relative",
+        zIndex: "0", // Set a lower z-index for the slider
+      }}
+      ref={ref}
+    >
       <h1
         style={{
           textAlign: "center",
@@ -31,8 +36,9 @@ export default function App() {
           paddingBottom: "15px",
           borderRadius: "20px",
           boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-          animation: "gradientAnimation 1s linear infinite",
-        }}>
+          marginBottom: "20px", // Add margin bottom to create space for the slider
+        }}
+      >
         Major Project Catalogue
       </h1>
       <Carousel showDots={false} responsive={responsive}>
@@ -40,4 +46,6 @@ export default function App() {
       </Carousel>
     </div>
   );
-}
+});
+
+export default MajorSlider;

@@ -19,13 +19,11 @@ const Slider = forwardRef((props, ref) => {
 
   return (
     <div
-      className="App"
       style={{
-        justifyContent: "center",
         marginTop: "20px",
-        backgroundImage: "/Main.png",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+        marginBottom: "60px", // Adjust to create space for the navbar
+        position: "relative",
+        zIndex: "0", // Set a lower z-index for the slider
       }}
       ref={ref}
     >
@@ -38,6 +36,7 @@ const Slider = forwardRef((props, ref) => {
           paddingBottom: "15px",
           borderRadius: "20px",
           boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+          marginBottom: "20px", // Add margin bottom to create space for the slider
         }}
       >
         Mini Project Catalogue
