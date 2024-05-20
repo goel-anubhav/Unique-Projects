@@ -24,7 +24,7 @@ export const productData = [
     id: 1,
     imageurl:
       "https://img.freepik.com/free-photo/colorful-equal-rights-symbol-concept_23-2148415318.jpg?t=st=1715325739~exp=1715329339~hmac=f7fdc4e472fdd932cae05b058e260efc6d6f599159f14f009ad3d1090019f2ca&w=740",
-    name: "Colorful sneakers",
+    name: "Cloud Storage Using Blockchain",
     price: "$19.99",
     description: "Some text about the product..",
   },
