@@ -92,7 +92,11 @@ const NavBar = () => {
     <>
       <Navbar>
         <LogoTitleContainer>
-          <Logo src="/path-to-your-logo.png" alt="Logo" />
+          <Logo
+            src="/Favicon.png"
+            alt="Logo"
+            style={{ height: "120px", width: "90px" }}
+          />
           <Title>Unique Projects</Title>
         </LogoTitleContainer>
         <LinksContainer click={click}>
@@ -128,7 +132,8 @@ const HamburgerMenuOpen = () => (
     stroke="currentColor"
     strokeWidth="2"
     strokeLinecap="round"
-    strokeLinejoin="round">
+    strokeLinejoin="round"
+  >
     <line x1="3" y1="6" x2="21" y2="6" />
     <line x1="3" y1="12" x2="21" y2="12" />
     <line x1="3" y1="18" x2="21" y2="18" />
@@ -145,7 +150,8 @@ const HamburgerMenuClose = () => (
     stroke="currentColor"
     strokeWidth="2"
     strokeLinecap="round"
-    strokeLinejoin="round">
+    strokeLinejoin="round"
+  >
     <path d="M18 6 6 18" />
     <path d="m6 6 12 12" />
   </svg>
