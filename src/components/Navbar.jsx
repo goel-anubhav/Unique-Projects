@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Navbar = styled.nav`
   height: 70px;
@@ -48,7 +49,7 @@ const LinksContainer = styled.div`
   }
 `;
 
-const Link = styled.div`
+const NavLink = styled(Link)`
   text-decoration: none;
   display: flex;
   color: white;
@@ -89,18 +90,10 @@ const SpacingDiv = styled.div`
   height: 70px; /* Height of the gap you want to create below the navbar */
 `;
 
-const NavBar = ({ miniProjectRef }) => {
+const NavBar = () => {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
-
-  const scrollToSection = (ref) => {
-    const yOffset = -70; // Adjust this value based on your navbar height
-    const y =
-      ref.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
-    window.scrollTo({ top: y, behavior: "smooth" });
-    setClick(false); // Close the mobile menu after clicking the link
-  };
 
   return (
     <>
@@ -114,12 +107,16 @@ const NavBar = ({ miniProjectRef }) => {
           <Title>Unique Projects</Title>
         </LogoTitleContainer>
         <LinksContainer click={click}>
-          <Link onClick={() => setClick(false)}>Home</Link>
-          <Link onClick={() => scrollToSection(miniProjectRef)}>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/mini-project" onClick={() => setClick(false)}>
             Mini Project
-          </Link>
-          <Link onClick={() => setClick(false)}>Major Project</Link>
-          <Link onClick={() => setClick(false)}>Contact Us</Link>
+          </NavLink>
+          <NavLink to="/major-project" onClick={() => setClick(false)}>
+            Major Project
+          </NavLink>
+          <NavLink to="/contact-us" onClick={() => setClick(false)}>
+            Contact Us
+          </NavLink>
         </LinksContainer>
         <MobileMenuIcon onClick={handleClick}>
           {click ? <HamburgerMenuClose /> : <HamburgerMenuOpen />}

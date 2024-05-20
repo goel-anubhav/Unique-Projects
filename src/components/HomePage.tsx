@@ -6,13 +6,11 @@ import MajorSlider from "./Major_Carouseler/MajorSlider";
 import Footer from "./Footer";
 
 function Homepage() {
-  const miniProjectRef = useRef(null);
-
   return (
     <>
-      <Navbar miniProjectRef={miniProjectRef} />
+      <Navbar />
       <SliderShow />
-      <section ref={miniProjectRef}>
+      <section>
         <Slider />
       </section>
       <section id="major-projects">

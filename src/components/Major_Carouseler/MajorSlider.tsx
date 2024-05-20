@@ -25,7 +25,6 @@ const MajorSlider = forwardRef((props, ref) => {
         position: "relative",
         zIndex: "0", // Set a lower z-index for the slider
       }}
-      ref={ref}
     >
       <h1
         style={{
