@@ -1,83 +1,157 @@
 import React from "react";
-import styled from "styled-components";
+import NavBar from "./Navbar";
+import Footer from "./Footer";
+import Button from "@mui/material/Button";
+import "bootstrap/dist/css/bootstrap.min.css"; // Make sure to import Bootstrap CSS
+import MailIcon from "@mui/icons-material/Mail";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import TelegramIcon from "@mui/icons-material/Telegram";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
-const ContactUsContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-`;
-
-const Title = styled.h1`
-  margin-bottom: 20px;
-`;
-
-const Button = styled.a`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 20px;
-  background-color: ${(props) => props.bgColor || "#007bff"};
-  color: black; /* Set the text color to black */
-  border: none;
-  border-radius: 4px;
-  text-decoration: none;
-  text-align: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 100%;
-  max-width: 300px;
-
-  &:hover {
-    background-color: ${(props) => props.hoverColor || "#0056b3"};
-    text-decoration: none; /* Remove underline on hover */
-  }
-
-  &:not(:last-child) {
-    margin-bottom: 15px; /* Increase the gap between buttons */
-  }
-`;
-
-const Icon = styled.img`
-  width: 24px; /* Increase the size of the icons */
-  height: 24px;
-  margin-right: 10px;
-`;
-
-const ContactUsPage = () => {
+function ContactUs() {
   return (
-    <ContactUsContainer>
-      <Title>Contact Us</Title>
-      <Button href="mailto:youremail@example.com">
-        <Icon src="/mail-icon.svg" alt="Mail" />
-        Write Me a Mail
-      </Button>
-      <Button
-        href="https://t.me/yourtelegramusername"
-        bgColor="#0088cc"
-        hoverColor="#0071a4"
-      >
-        <Icon src="/telegram-icon.svg" alt="Telegram" />
-        Write Me a Message (Telegram)
-      </Button>
-      <Button
-        href="https://instagram.com/yourinstagramusername"
-        bgColor="#e4405f"
-        hoverColor="#b02844"
-      >
-        <Icon src="/instagram-icon.svg" alt="Instagram" />
-        Write Me a Message (Instagram)
-      </Button>
-      <Button
-        href="https://www.youtube.com/channel/yourchannelid"
-        bgColor="#ff0000"
-        hoverColor="#cc0000"
-      >
-        <Icon src="/youtube-icon.svg" alt="YouTube" />
-        Subscribe Us on YouTube
-      </Button>
-    </ContactUsContainer>
+    <>
+      <NavBar />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "80vh", // Adjust the height to your preference
+          padding: "20px",
+        }}>
+        <div
+          className="d-grid gap-2"
+          style={{
+            width: "100%",
+            maxWidth: "300px",
+            textAlign: "center",
+          }}>
+          <Button
+            href="mailto:uniqueappsites@gmail.com?subject=Contacting%20for%3A%20&body=Hey!!%20Unique%20Projects%0A%0AI'm%20----Name---%0A%0AI%20have%20the%20concern%20that%3A%20%0A%0A%0A%0AYours%20Sincerely%0A---Name---%0A--Email---%0A--Phone%20Number--%0A---Telegram%20Username--"
+            target="_blank"
+            variant="contained"
+            startIcon={<MailIcon />}
+            style={{
+              backgroundColor: "#C71610",
+              color: "white",
+              marginBottom: "10px",
+            }}>
+            Mail
+          </Button>
+          <Button
+            href="https://www.youtube.com/c/UniqueAppSites?sub_confirmation=1"
+            target="_blank"
+            variant="contained"
+            startIcon={<YouTubeIcon />}
+            style={{
+              backgroundColor: "#FF0000",
+              color: "white",
+              marginBottom: "10px",
+            }}>
+            YouTube
+          </Button>
+          <Button
+            href="https://github.com/goel-anubhav"
+            target="_blank"
+            variant="contained"
+            startIcon={<GitHubIcon />}
+            style={{
+              backgroundColor: "#211F1F",
+              color: "white",
+              marginBottom: "10px",
+            }}>
+            GitHub
+          </Button>
+          <Button
+            href="https://www.instagram.com/anubhav_goel1206/"
+            target="_blank"
+            variant="contained"
+            startIcon={<InstagramIcon />}
+            style={{
+              backgroundColor: "#E1306C",
+              color: "white",
+              marginBottom: "10px",
+            }}>
+            Instagram
+          </Button>
+          <Button
+            href="https://tttttt.me/UniqueAppSitesOfficial"
+            target="_blank"
+            variant="contained"
+            startIcon={<TelegramIcon />}
+            style={{
+              backgroundColor: "#0088cc",
+              color: "white",
+              marginBottom: "10px",
+            }}>
+            Telegram Group
+          </Button>
+          <Button
+            href="https://t.me/AnubhavGoel01"
+            target="_blank"
+            variant="contained"
+            startIcon={<TelegramIcon />}
+            style={{
+              backgroundColor: "#0088cc",
+              color: "white",
+              marginBottom: "10px",
+            }}>
+            Telegram Chat
+          </Button>
+          <Button
+            href="https://www.facebook.com/anubhav.goyal.121"
+            target="_blank"
+            variant="contained"
+            startIcon={<FacebookIcon />}
+            style={{
+              backgroundColor: "#4267B2",
+              color: "white",
+              marginBottom: "10px",
+            }}>
+            Facebook
+          </Button>
+          <Button
+            href="https://www.linkedin.com/in/anubhav-goel-1206/"
+            target="_blank"
+            variant="contained"
+            startIcon={<LinkedInIcon />}
+            style={{
+              backgroundColor: "#0077B5",
+              color: "white",
+              marginBottom: "10px",
+            }}>
+            LinkedIn
+          </Button>
+          <Button
+            href="https://x.com/AnubhavG12"
+            target="_blank"
+            variant="contained"
+            style={{
+              backgroundColor: "#000000",
+              color: "white",
+              marginBottom: "10px",
+            }}>
+            X
+          </Button>
+          {/* <Button
+            href="#"
+            variant="contained"
+            style={{
+              backgroundColor: "#FFA500",
+              color: "white",
+              marginBottom: "10px",
+            }}>
+            Threads
+          </Button> */}
+        </div>
+      </div>
+      <Footer />
+    </>
   );
-};
+}
 
-export default ContactUsPage;
+export default ContactUs;
