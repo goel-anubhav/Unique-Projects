@@ -5,14 +5,32 @@ import Product from "./Product";
 import { productData, responsive } from "./data";
 import "./Slider.css";
 
+// Function to limit the length of the product description
+const limitDescriptionLength = (
+  description: string,
+  maxLength: number
+) => {
+  if (description.length <= maxLength) {
+    return description;
+  }
+  return description.substring(0, maxLength) + "...";
+};
+
+const limitTitleLength = (name, maxLength) => {
+  if (name.length <= maxLength) {
+    return name;
+  }
+  return name.substring(0, maxLength) + "...";
+};
+
 const Slider = forwardRef((props, ref) => {
   const product = productData.map((item, index) => (
     <div key={index} className="Product">
       <Product
-        name={item.name}
+        name={limitTitleLength(item.name, 20)} // Limit title length to 20 characters
         url={item.imageurl}
         price={item.price}
-        description={item.description}
+        description={limitDescriptionLength(item.description, 100)} // Limit description length to 100 characters
       />
     </div>
   ));
@@ -24,8 +42,7 @@ const Slider = forwardRef((props, ref) => {
         marginBottom: "60px", // Adjust to create space for the navbar
         position: "relative",
         zIndex: "0", // Set a lower z-index for the slider
-      }}
-    >
+      }}>
       <h1
         style={{
           textAlign: "center",
@@ -36,8 +53,7 @@ const Slider = forwardRef((props, ref) => {
           borderRadius: "20px",
           boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
           marginBottom: "20px", // Add margin bottom to create space for the slider
-        }}
-      >
+        }}>
         Mini Project Catalogue
       </h1>
       <Carousel showDots={false} responsive={responsive}>

@@ -24,17 +24,19 @@ export const productData = [
     id: 1,
     imageurl:
       "https://img.freepik.com/free-photo/colorful-equal-rights-symbol-concept_23-2148415318.jpg?t=st=1715325739~exp=1715329339~hmac=f7fdc4e472fdd932cae05b058e260efc6d6f599159f14f009ad3d1090019f2ca&w=740",
-    name: "Colorful sneakers",
+    name: "Colorful sneakers ytcrtycttrtttr ",
     price: "$19.99",
-    description: "Some text about the product..",
+    description:
+      "Some text about the product hvfyycrxetretrextrertetrtre5ex  v  g kft gyuvr vtv..",
   },
   {
     id: 2,
     imageurl:
       "https://img.freepik.com/free-photo/colorful-equal-rights-symbol-concept_23-2148415318.jpg?t=st=1715325739~exp=1715329339~hmac=f7fdc4e472fdd932cae05b058e260efc6d6f599159f14f009ad3d1090019f2ca&w=740",
-    name: "Sport sneakers",
+    name: "Sport sneakers jhewgbufve dhvguyg duyvywq",
     price: "$21.99",
-    description: "Some text about the product..",
+    description:
+      "Some text about the product gwevfuy3 2 ed132vyt ckuvyt1..",
   },
   {
     id: 3,
