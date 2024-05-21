@@ -5,6 +5,7 @@ import PageLayout from "./components/PageLayout/PageLayout";
 import ContactUs from "./components/ContactUs";
 import MiniProjectPage from "./components/Carouseler/MiniProjectPage";
 import MajorProductPage from "./components/Major_Carouseler/MajorProjectPage";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (

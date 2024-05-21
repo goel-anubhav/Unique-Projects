@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Product from "./MajorProduct";
 import { productData } from "./Majordata";
 import styled from "styled-components";
@@ -44,6 +44,10 @@ const ProductPage = () => {
     return name.substring(0, maxLength) + "...";
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <NavBar />
@@ -58,8 +62,7 @@ const ProductPage = () => {
             borderRadius: "20px",
             boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
             marginBottom: "5px", // Add margin bottom to create space for the slider
-          }}
-        >
+          }}>
           Major Project Catalogue
         </h1>
         <ProductGrid>
@@ -70,7 +73,10 @@ const ProductPage = () => {
                   name={limitTitleLength(product.name, 20)}
                   url={product.imageurl}
                   price={product.price}
-                  description={limitDescriptionLength(product.description, 100)} // Limit description length to 100 characters
+                  description={limitDescriptionLength(
+                    product.description,
+                    100
+                  )} // Limit description length to 100 characters
                 />
               </ProductCard>
             </ProductGridItem>
